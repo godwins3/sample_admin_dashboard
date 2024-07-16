@@ -18,21 +18,21 @@ import {
   ChartTooltipContent
 } from '@/components/ui/chart';
 const chartData = [
-  { month: 'January', desktop: 186, mobile: 80 },
-  { month: 'February', desktop: 305, mobile: 200 },
-  { month: 'March', desktop: 237, mobile: 120 },
-  { month: 'April', desktop: 73, mobile: 190 },
-  { month: 'May', desktop: 209, mobile: 130 },
-  { month: 'June', desktop: 214, mobile: 140 }
+  { month: 'January', expenditure: 186, revenue: 80 },
+  { month: 'February', expenditure: 305, revenue: 200 },
+  { month: 'March', expenditure: 237, revenue: 120 },
+  { month: 'April', expenditure: 73, revenue: 190 },
+  { month: 'May', expenditure: 209, revenue: 130 },
+  { month: 'June', expenditure: 214, revenue: 140 }
 ];
 
 const chartConfig = {
-  desktop: {
-    label: 'Desktop',
+  expenditure: {
+    label: 'expenditure',
     color: 'hsl(var(--chart-1))'
   },
-  mobile: {
-    label: 'Mobile',
+  revenue: {
+    label: 'revenue',
     color: 'hsl(var(--chart-2))'
   }
 } satisfies ChartConfig;
@@ -41,9 +41,9 @@ export function AreaGraph() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Area Chart - Stacked</CardTitle>
+        <CardTitle>Revenue vs Expenditure</CardTitle>
         <CardDescription>
-          Showing total visitors for the last 6 months
+          Comparing revenue and expenditure for the last 6 months
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -72,19 +72,19 @@ export function AreaGraph() {
               content={<ChartTooltipContent indicator="dot" />}
             />
             <Area
-              dataKey="mobile"
+              dataKey="revenue"
               type="natural"
-              fill="var(--color-mobile)"
+              fill="var(--color-revenue)"
               fillOpacity={0.4}
-              stroke="var(--color-mobile)"
+              stroke="var(--color-revenue)"
               stackId="a"
             />
             <Area
-              dataKey="desktop"
+              dataKey="expenditure"
               type="natural"
-              fill="var(--color-desktop)"
+              fill="var(--color-expenditure)"
               fillOpacity={0.4}
-              stroke="var(--color-desktop)"
+              stroke="var(--color-expenditure)"
               stackId="a"
             />
           </AreaChart>

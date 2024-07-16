@@ -11,7 +11,7 @@ interface SidebarProps extends React.HTMLAttributes<HTMLDivElement> {
   // playlists: Playlist[];
 }
 
-export function MobileSidebar({ className }: SidebarProps) {
+export function revenueSidebar({ className }: SidebarProps) {
   const [open, setOpen] = useState(false);
   return (
     <>
@@ -28,7 +28,7 @@ export function MobileSidebar({ className }: SidebarProps) {
               <div className="space-y-1">
                 <DashboardNav
                   items={navItems}
-                  isMobileNav={true}
+                  isrevenueNav={true}
                   setOpen={setOpen}
                 />
               </div>

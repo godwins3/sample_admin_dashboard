@@ -19,31 +19,31 @@ import {
   ChartTooltipContent
 } from '@/components/ui/chart';
 const chartData = [
-  { browser: 'chrome', visitors: 275, fill: 'var(--color-chrome)' },
-  { browser: 'safari', visitors: 200, fill: 'var(--color-safari)' },
-  { browser: 'firefox', visitors: 287, fill: 'var(--color-firefox)' },
-  { browser: 'edge', visitors: 173, fill: 'var(--color-edge)' },
-  { browser: 'other', visitors: 190, fill: 'var(--color-other)' }
+  { category: 'cash', transactions: 275, fill: 'var(--color-cash)' },
+  { category: 'mpesa', transactions: 200, fill: 'var(--color-mpesa)' },
+  { category: 'jisort', transactions: 287, fill: 'var(--color-jisort)' },
+  { category: 'bank', transactions: 173, fill: 'var(--color-bank)' },
+  { category: 'other', transactions: 190, fill: 'var(--color-other)' }
 ];
 
 const chartConfig = {
-  visitors: {
-    label: 'Visitors'
+  transactions: {
+    label: 'Transactions'
   },
-  chrome: {
-    label: 'Chrome',
+  cash: {
+    label: 'Cash',
     color: 'hsl(var(--chart-1))'
   },
-  safari: {
-    label: 'Safari',
+  mpesa: {
+    label: 'Mpesa',
     color: 'hsl(var(--chart-2))'
   },
-  firefox: {
-    label: 'Firefox',
+  jisort: {
+    label: 'Jisort',
     color: 'hsl(var(--chart-3))'
   },
-  edge: {
-    label: 'Edge',
+  bank: {
+    label: 'Bank',
     color: 'hsl(var(--chart-4))'
   },
   other: {
@@ -53,14 +53,14 @@ const chartConfig = {
 } satisfies ChartConfig;
 
 export function PieGraph() {
-  const totalVisitors = React.useMemo(() => {
-    return chartData.reduce((acc, curr) => acc + curr.visitors, 0);
+  const totalTransactions = React.useMemo(() => {
+    return chartData.reduce((acc, curr) => acc + curr.transactions, 0);
   }, []);
 
   return (
     <Card className="flex flex-col">
       <CardHeader className="items-center pb-0">
-        <CardTitle>Pie Chart - Donut with Text</CardTitle>
+        <CardTitle>Transactions per category</CardTitle>
         <CardDescription>January - June 2024</CardDescription>
       </CardHeader>
       <CardContent className="flex-1 pb-0">
@@ -75,8 +75,8 @@ export function PieGraph() {
             />
             <Pie
               data={chartData}
-              dataKey="visitors"
-              nameKey="browser"
+              dataKey="transactions"
+              nameKey="category"
               innerRadius={60}
               strokeWidth={5}
             >
@@ -95,14 +95,14 @@ export function PieGraph() {
                           y={viewBox.cy}
                           className="fill-foreground text-3xl font-bold"
                         >
-                          {totalVisitors.toLocaleString()}
+                          {totalTransactions.toLocaleString()}
                         </tspan>
                         <tspan
                           x={viewBox.cx}
                           y={(viewBox.cy || 0) + 24}
                           className="fill-muted-foreground"
                         >
-                          Visitors
+                          Transactions
                         </tspan>
                       </text>
                     );
@@ -118,7 +118,7 @@ export function PieGraph() {
           Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
         </div>
         <div className="leading-none text-muted-foreground">
-          Showing total visitors for the last 6 months
+          Showing total transactions for the last 6 months
         </div>
       </CardFooter>
     </Card>

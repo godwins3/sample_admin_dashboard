@@ -18,13 +18,13 @@ import {
 interface DashboardNavProps {
   items: NavItem[];
   setOpen?: Dispatch<SetStateAction<boolean>>;
-  isMobileNav?: boolean;
+  isrevenueNav?: boolean;
 }
 
 export function DashboardNav({
   items,
   setOpen,
-  isMobileNav = false
+  isrevenueNav = false
 }: DashboardNavProps) {
   const path = usePathname();
   const { isMinimized } = useSidebar();
@@ -33,7 +33,7 @@ export function DashboardNav({
     return null;
   }
 
-  console.log('isActive', isMobileNav, isMinimized);
+  console.log('isActive', isrevenueNav, isMinimized);
 
   return (
     <nav className="grid items-start gap-2">
@@ -57,7 +57,7 @@ export function DashboardNav({
                   >
                     <Icon className={`ml-3 size-5`} />
 
-                    {isMobileNav || (!isMinimized && !isMobileNav) ? (
+                    {isrevenueNav || (!isMinimized && !isrevenueNav) ? (
                       <span className="mr-2 truncate">{item.title}</span>
                     ) : (
                       ''
