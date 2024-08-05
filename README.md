@@ -1,6 +1,6 @@
-# JISORT SACCO DASHBOARD
+# CTN STAFF DASHBOARD
 
-Jisort is a local psp that focuses on micro loans
+CTN is an agricultural startup in Kenya that aims to link farmers to the market
 
 ## Overview
 
