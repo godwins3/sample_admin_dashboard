@@ -18,21 +18,21 @@ import {
   ChartTooltipContent
 } from '@/components/ui/chart';
 const chartData = [
-  { month: 'January', expenditure: 186, revenue: 80 },
-  { month: 'February', expenditure: 305, revenue: 200 },
-  { month: 'March', expenditure: 237, revenue: 120 },
-  { month: 'April', expenditure: 73, revenue: 190 },
-  { month: 'May', expenditure: 209, revenue: 130 },
-  { month: 'June', expenditure: 214, revenue: 140 }
+  { month: 'January', withdrawals: 186, sales: 80 },
+  { month: 'February', withdrawals: 305, sales: 200 },
+  { month: 'March', withdrawals: 237, sales: 120 },
+  { month: 'April', withdrawals: 73, sales: 190 },
+  { month: 'May', withdrawals: 209, sales: 130 },
+  { month: 'June', withdrawals: 214, sales: 140 }
 ];
 
 const chartConfig = {
-  expenditure: {
-    label: 'expenditure',
+  withdrawals: {
+    label: 'withdrawals',
     color: 'hsl(var(--chart-1))'
   },
-  revenue: {
-    label: 'revenue',
+  sales: {
+    label: 'sales',
     color: 'hsl(var(--chart-2))'
   }
 } satisfies ChartConfig;
@@ -41,9 +41,9 @@ export function AreaGraph() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Revenue vs Expenditure</CardTitle>
+        <CardTitle>sales vs withdrawals</CardTitle>
         <CardDescription>
-          Comparing revenue and expenditure for the last 6 months
+          Comparing sales and withdrawals for the last 6 months
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -72,19 +72,19 @@ export function AreaGraph() {
               content={<ChartTooltipContent indicator="dot" />}
             />
             <Area
-              dataKey="revenue"
+              dataKey="sales"
               type="natural"
-              fill="var(--color-revenue)"
+              fill="var(--color-sales)"
               fillOpacity={0.4}
-              stroke="var(--color-revenue)"
+              stroke="var(--color-sales)"
               stackId="a"
             />
             <Area
-              dataKey="expenditure"
+              dataKey="withdrawals"
               type="natural"
-              fill="var(--color-expenditure)"
+              fill="var(--color-withdrawals)"
               fillOpacity={0.4}
-              stroke="var(--color-expenditure)"
+              stroke="var(--color-withdrawals)"
               stackId="a"
             />
           </AreaChart>

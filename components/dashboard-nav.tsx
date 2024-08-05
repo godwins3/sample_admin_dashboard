@@ -33,7 +33,7 @@ export function DashboardNav({
     return null;
   }
 
-  console.log('isActive', isrevenueNav, isMinimized);
+  // console.log('isActive', isrevenueNav, isMinimized);
 
   return (
     <nav className="grid items-start gap-2">

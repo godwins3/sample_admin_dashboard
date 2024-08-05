@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Next Shadcn',
-  description: 'Jisort Capital Dashboard'
+  description: 'ctn dashboard Dashboard'
 };
 
 export default async function RootLayout({

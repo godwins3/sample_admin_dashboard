@@ -41,9 +41,9 @@ export default function AuthenticationPage() {
         <div className="relative z-20 mt-auto">
           <blockquote className="space-y-2">
             <p className="text-lg">
-              &ldquo;In a fast paced world access to money is essential
-              for the growth of any economy but you at times you just
-              dont have it fear not cause Jisort will sort you out&rdquo;
+              &ldquo;In a fast paced world access to market is essential
+              for the growth of any business. At CTN we strive to connect
+              farmers with the ideal market for their farm produce&rdquo;
             </p>
             <footer className="text-sm">Praise Godwins</footer>
           </blockquote>

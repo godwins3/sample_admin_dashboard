@@ -3,8 +3,8 @@ import Sidebar from '@/components/layout/sidebar';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Jisort Capital',
-  description: 'Jisort Capital Dashboard'
+  title: 'ctn dashboard',
+  description: 'ctn dashboard Dashboard'
 };
 
 export default function DashboardLayout({

@@ -2,7 +2,6 @@ import { AreaGraph } from '@/components/charts/area-graph';
 import { BarGraph } from '@/components/charts/bar-graph';
 import { PieGraph } from '@/components/charts/pie-graph';
 import { CalendarDateRangePicker } from '@/components/date-range-picker';
-import { Overview } from '@/components/overview';
 import { RecentSales } from '@/components/recent-sales';
 import { Button } from '@/components/ui/button';
 import {
@@ -65,7 +64,7 @@ export default function page() {
               <Card>
                 <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                   <CardTitle className="text-sm font-medium">
-                    Trips
+                    Users
                   </CardTitle>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -116,7 +115,7 @@ export default function page() {
               <Card>
                 <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                   <CardTitle className="text-sm font-medium">
-                    Active Now
+                    Active Users
                   </CardTitle>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

@@ -21,7 +21,6 @@ import {
 const chartData = [
   { category: 'cash', transactions: 275, fill: 'var(--color-cash)' },
   { category: 'mpesa', transactions: 200, fill: 'var(--color-mpesa)' },
-  { category: 'jisort', transactions: 287, fill: 'var(--color-jisort)' },
   { category: 'bank', transactions: 173, fill: 'var(--color-bank)' },
   { category: 'other', transactions: 190, fill: 'var(--color-other)' }
 ];
@@ -37,10 +36,6 @@ const chartConfig = {
   mpesa: {
     label: 'Mpesa',
     color: 'hsl(var(--chart-2))'
-  },
-  jisort: {
-    label: 'Jisort',
-    color: 'hsl(var(--chart-3))'
   },
   bank: {
     label: 'Bank',

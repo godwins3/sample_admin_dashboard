@@ -12,32 +12,32 @@ export const users: User[] = [
   {
     id: 1,
     name: 'Candice Schiner',
-    company: 'Dell',
-    role: 'Frontend Developer',
+    company: 'Delamere',
+    role: 'Large Scale Farmer',
     verified: false,
     status: 'Active'
   },
   {
     id: 2,
     name: 'John Doe',
-    company: 'TechCorp',
-    role: 'Backend Developer',
+    company: 'Ole Sereni farms',
+    role: 'Large Scale Farmer',
     verified: true,
     status: 'Active'
   },
   {
     id: 3,
     name: 'Alice Johnson',
-    company: 'WebTech',
-    role: 'UI Designer',
+    company: 'Aorist Labs technologies',
+    role: 'Farm inputs retailer',
     verified: true,
     status: 'Active'
   },
   {
     id: 4,
     name: 'David Smith',
-    company: 'Innovate Inc.',
-    role: 'Fullstack Developer',
+    company: 'Ole Sapit farms',
+    role: 'Small scale farmer',
     verified: false,
     status: 'Inactive'
   },
@@ -45,7 +45,7 @@ export const users: User[] = [
     id: 5,
     name: 'Emma Wilson',
     company: 'TechGuru',
-    role: 'Product Manager',
+    role: 'Agricultural extentionist',
     verified: true,
     status: 'Active'
   },
@@ -53,39 +53,39 @@ export const users: User[] = [
     id: 6,
     name: 'James Brown',
     company: 'CodeGenius',
-    role: 'QA Engineer',
+    role: 'Farm input retailer',
     verified: false,
     status: 'Active'
   },
   {
     id: 7,
     name: 'Laura White',
-    company: 'SoftWorks',
-    role: 'UX Designer',
+    company: 'SoftWorks farms',
+    role: 'Large Scale Farmer',
     verified: true,
     status: 'Active'
   },
   {
     id: 8,
     name: 'Michael Lee',
-    company: 'DevCraft',
-    role: 'DevOps Engineer',
+    company: 'Craft farms',
+    role: 'Small scale farmer',
     verified: false,
     status: 'Active'
   },
   {
     id: 9,
     name: 'Olivia Green',
-    company: 'WebSolutions',
-    role: 'Frontend Developer',
+    company: 'Solutions technologies',
+    role: 'Large Scale Farmer',
     verified: true,
     status: 'Active'
   },
   {
     id: 10,
     name: 'Robert Taylor',
-    company: 'DataTech',
-    role: 'Data Analyst',
+    company: 'Kenya Craft farms',
+    role: 'Small scale farms',
     verified: false,
     status: 'Active'
   }
