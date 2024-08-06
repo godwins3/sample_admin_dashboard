@@ -143,9 +143,9 @@ export function BarGraph() {
     <Card>
       <CardHeader className="flex flex-col items-stretch space-y-0 border-b p-0 sm:flex-row">
         <div className="flex flex-1 flex-col justify-center gap-1 px-6 py-5 sm:py-6">
-          <CardTitle>Trips</CardTitle>
+          <CardTitle>Transactions</CardTitle>
           <CardDescription>
-            Showing total trips for the last 3 months
+            Showing total transactions for the last 3 months
           </CardDescription>
         </div>
         <div className="flex">
