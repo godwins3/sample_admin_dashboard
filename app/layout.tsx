@@ -10,8 +10,8 @@ import { auth } from '@/auth';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Next Shadcn',
-  description: 'ctn dashboard Dashboard'
+  title: 'CTN ',
+  description: 'ctn Dashboard'
 };
 
 export default async function RootLayout({
