@@ -1,13 +1,17 @@
-import { Metadata } from 'next';
+/* eslint-disable import/no-unresolved */
+'use client'
 import Link from 'next/link';
-import UserAuthForm from '@/components/forms/user-auth-form';
+import { z } from 'zod';
 import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import LoginForm from '@/components/forms/user-auth-form';
 
-export const metadata: Metadata = {
-  title: 'Authentication',
-  description: 'Authentication forms built using the components.'
-};
+const schema = z.object({
+  email: z.string().email({ message: 'Please enter a valid Email' }),
+  password: z.string().min(8, { message: 'Password must be at least 8 characters long' }),
+});
+
+export type IForm = z.infer<typeof schema>;
 
 export default function AuthenticationPage() {
   return (
@@ -53,15 +57,15 @@ export default function AuthenticationPage() {
         <div className="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]">
           <div className="flex flex-col space-y-2 text-center">
             <h1 className="text-2xl font-semibold tracking-tight">
-              Create an account
+              Sign In
             </h1>
             <p className="text-sm text-muted-foreground">
-              Enter your email below to create your account
+              Enter your email and password to sign in
             </p>
           </div>
-          <UserAuthForm />
+          < LoginForm />
           <p className="px-8 text-center text-sm text-muted-foreground">
-            By clicking continue, you agree to our{' '}
+            By signing in, you agree to our{' '}
             <Link
               href="/terms"
               className="underline underline-offset-4 hover:text-primary"
