@@ -1,6 +1,6 @@
-# CTN STAFF DASHBOARD
+# SAMPLE ADMIN DASHBOARD
 
-CTN is an agricultural startup in Kenya that aims to link farmers to the market
+Dashboard sample made using typescript nextjs
 
 ## Overview
 
